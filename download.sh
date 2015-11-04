@@ -9,7 +9,7 @@ download_stbx86_pkg() {
   if ! test -f "$F.downloaded"; then
     # TODO(pts): Don't fail if fully downloaded: wget: server returned error: HTTP/1.1 416 Requested Range Not Satisfiable
     ./busybox wget -c -O "$F" \
-        http://pts-mini-gpl.googlecode.com/svn/trunk/stbx86/"$F"
+        https://raw.githubusercontent.com/pts/stbx86/master/"$F" \
     ./busybox touch "$F".downloaded
   fi
   test -s "$F"
